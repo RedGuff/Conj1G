@@ -20,22 +20,19 @@ int main() {
     string verb="";
 entrer:
     cout << "Les accents et autres diacritiques ne sont pas rendus." << endl;
-    cout << "C\'est pour cela que j\'affiche la congaison en lettres capitales." << endl;
+    cout << "C\'est pour cela que j\'affiche la conjugaison en lettres capitales." << endl;
     cout << "https://fr.wikipedia.org/wiki/Capitale_et_majuscule#Diff%C3%A9rence_entre_les_capitales_et_les_majuscules" << endl;
-    cout << "Entrez votre verbe du premier groupe : " << endl;
+    cout << "Entrez votre verbe du premier groupe, dont je vous confie le respect de l\'orthographe : " << endl;
     getline ( cin, verb );
     verb = toUp ( verb );
-
     if ( verb == "ALLER" ) {
         errPasPremierGroupe();
         goto entrer;
         }
-
     if ( verb.substr ( verb.size() - 2,verb.size() ) != "ER" ) {
         errPasPremierGroupe();
         goto entrer;
         }
-
     verb = verb.substr ( 0,verb.size() - 2 );
 
     if ( ( verb.substr ( 0,3 ) == "SE " ) ) {
@@ -47,6 +44,15 @@ entrer:
         cout<<"VOUS VOUS "<<verb<<"EZ."<<endl;
         cout<<"ILS/ELLES/IELS/IELLES SE "<<verb<<"ENT."<<endl;
         }
+    else if ( ( verb.substr ( 0,2 ) == "S'" ) ) {
+        verb = verb.substr ( 2,verb.size() );
+        cout<<"JE M'"<<verb<<"E."<<endl;
+        cout<<"TU T'"<<verb<<"ES."<<endl;
+        cout<<"IL/ELLE/IEL/IELLE/ON S'"<<verb<<"E."<<endl;
+        cout<<"NOUS NOUS "<<verb<<"ONS."<<endl;
+        cout<<"VOUS VOUS "<<verb<<"EZ."<<endl;
+        cout<<"ILS/ELLES/IELS/IELLES S'"<<verb<<"ENT."<<endl;
+        }
     else {
         cout<<"JE "<<verb<<"E."<<endl;
         cout<<"TU "<<verb<<"ES."<<endl;
@@ -55,6 +61,5 @@ entrer:
         cout<<"VOUS "<<verb<<"EZ."<<endl;
         cout<<"ILS/ELLES/IELS/IELLES "<<verb<<"ENT."<<endl;
         }
-
     return 0;
     }

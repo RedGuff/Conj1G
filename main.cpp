@@ -35,31 +35,31 @@ entrer:
         }
     verb = verb.substr ( 0,verb.size() - 2 );
 
-    if ( ( verb.substr ( 0,3 ) == "SE " ) ) {
+    if ( ( verb.substr ( 0,3 ) == "SE " ) ) { // Se laver.
         verb = verb.substr ( 3,verb.size() );
         cout<<"JE ME "<<verb<<"E."<<endl;
         cout<<"TU TE "<<verb<<"ES."<<endl;
-        cout<<"IL/ELLE/IEL/IELLE/ON SE "<<verb<<"E."<<endl;
+        cout<<"IL/ELLE/ON SE "<<verb<<"E."<<endl;
         cout<<"NOUS NOUS "<<verb<<"ONS."<<endl;
         cout<<"VOUS VOUS "<<verb<<"EZ."<<endl;
-        cout<<"ILS/ELLES/IELS/IELLES SE "<<verb<<"ENT."<<endl;
+        cout<<"ILS/ELLES SE "<<verb<<"ENT."<<endl;
         }
-    else if ( ( verb.substr ( 0,2 ) == "S'" ) ) {
+    else if ( ( verb.substr ( 0,2 ) == "S'" ) ) { // S'aimer.
         verb = verb.substr ( 2,verb.size() );
         cout<<"JE M'"<<verb<<"E."<<endl;
         cout<<"TU T'"<<verb<<"ES."<<endl;
-        cout<<"IL/ELLE/IEL/IELLE/ON S'"<<verb<<"E."<<endl;
+        cout<<"IL/ELLE/ON S'"<<verb<<"E."<<endl;
         cout<<"NOUS NOUS "<<verb<<"ONS."<<endl;
         cout<<"VOUS VOUS "<<verb<<"EZ."<<endl;
-        cout<<"ILS/ELLES/IELS/IELLES S'"<<verb<<"ENT."<<endl;
+        cout<<"ILS/ELLES S'"<<verb<<"ENT."<<endl;
         }
-    else {
-        cout<<"JE "<<verb<<"E."<<endl;
+    else { // Manger.
+        cout<<"JE "<<verb<<"E."<<endl; 
         cout<<"TU "<<verb<<"ES."<<endl;
-        cout<<"IL/ELLE/IEL/IELLE "<<verb<<"E."<<endl;
+        cout<<"IL/ELLE/ON "<<verb<<"E."<<endl;
         cout<<"NOUS "<<verb<<"ONS."<<endl;
         cout<<"VOUS "<<verb<<"EZ."<<endl;
-        cout<<"ILS/ELLES/IELS/IELLES "<<verb<<"ENT."<<endl;
+        cout<<"ILS/ELLES "<<verb<<"ENT."<<endl;
         }
     return 0;
     }
